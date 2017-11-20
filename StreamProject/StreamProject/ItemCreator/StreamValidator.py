@@ -1,4 +1,4 @@
-from StreamItem import StreamItem
+from StreamProject.StreamProject.StreamItem import StreamItem
 
 
 class Validator:

@@ -2,11 +2,11 @@ class Stream:
     def __init__(self):
         self.__streamItems = []
 
-    def setStreamItems(self, streamItemList):
+    def set_stream_items(self, streamItemList):
         self.__streamItems = streamItemList
 
-    def addStreamItem(self, streamItem):
+    def add_stream_item(self, streamItem):
         self.__streamItems.append(streamItem)
 
-    def getStreamItems(self):
+    def get_stream_items(self):
         return self.__streamItems

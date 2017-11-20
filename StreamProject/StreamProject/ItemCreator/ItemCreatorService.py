@@ -1,5 +1,5 @@
-from ItemCreator.Parser import *
-from ItemCreator.ItemCreator import ItemCreator
+from StreamProject.StreamProject.ItemCreator.ItemCreator import ItemCreator
+from StreamProject.StreamProject.ItemCreator.Parser import JSONParser
 
 
 class ItemCreatorService:

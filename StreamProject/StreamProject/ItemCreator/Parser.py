@@ -1,6 +1,6 @@
 import json
 from abc import ABC, abstractmethod
-from ItemCreator.StreamValidator import Validator
+from StreamProject.StreamProject.ItemCreator.StreamValidator import Validator
 
 
 class Parser(ABC):

@@ -1,5 +1,4 @@
-from SQLiteDataBase import DB
-from StreamItem import StreamItem
+from StreamProject.StreamProject.StreamItem import StreamItem
 
 
 class ItemCreator:
@@ -25,14 +24,6 @@ class ItemCreator:
 
     @staticmethod
     def __save_item(stream_item):
-        database = DB()
-        database.insertData(
-            (
-             stream_item.get_title(),
-             stream_item.get_description(),
-             stream_item.get_topic(),
-             stream_item.get_category(),
-             stream_item.get_object_path()
-            )
-        )
+        """"""""
+
 
