@@ -9,11 +9,11 @@ class Parser(ABC):
 
     @abstractmethod
     def parse(self, data_object):
-        pass
+        """"""
 
     @abstractmethod
     def get_item_value(self):
-        pass
+        """"""
 
 
 class JSONParser(Parser):
@@ -23,9 +23,9 @@ class JSONParser(Parser):
         self.__validator = Validator()
 
     def parse(self, data_object):
-        data = json.loads(data_object)
-        if self.__validator.data_is_valid(data):
-            self.__item_value = data
+        if self.__validator.data_is_valid(data_object):
+            self.__item_value = data_object
+            return True
 
     def get_item_value(self):
         return self.__item_value

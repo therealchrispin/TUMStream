@@ -10,6 +10,9 @@ class Validator:
         sample_set = set(self.__sample_keys.keys())
         data_set = set(data.keys())
         if data_set == sample_set:
+            print('data_set' + str(data_set))
+
+            print('sample_set' + str(sample_set))
             return True
         else:
             return False
@@ -18,5 +21,4 @@ class Validator:
         class_name = StreamItem.__name__
         for key in StreamItem().__dict__.keys():
             new_key = key.replace('_'+class_name+'__', '')
-            print(new_key)
             self.__sample_keys[new_key] = ""
