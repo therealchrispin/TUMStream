@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from StreamProject.StreamProject.StreamCreator.Stream import Stream
+
+from StreamProject.StreamCreator.Stream import Stream
 
 
 class BaseStreamCreator(ABC):

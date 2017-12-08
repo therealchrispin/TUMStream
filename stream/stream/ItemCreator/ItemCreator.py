@@ -1,11 +1,12 @@
-from StreamProject.ItemCreator.DBWriteService import DBWriteService
+from stream.ItemCreator.DBWriteService import DBWriteService
 
 
 class ItemCreator:
-    def __init__(self):
+    def __init__(self, request):
         self.__parser = None
         self.__data_object = None
         self.__Item = {}
+        self.__request = request
 
     def set_parser(self, parser):
         self.__parser = parser
@@ -18,7 +19,7 @@ class ItemCreator:
             return True
 
     def __create(self):
-        DBWriteService.save_item_in_db(self.__Item)
+        DBWriteService.save_item_in_db(self.__request, self.__Item)
 
     def create_item(self):
         try:

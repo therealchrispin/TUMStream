@@ -1,5 +1,6 @@
+import json
 from abc import ABC, abstractmethod
-from StreamProject.ItemCreator.StreamValidator import Validator
+from stream.ItemCreator.StreamValidator import Validator
 
 
 class Parser(ABC):
@@ -22,9 +23,15 @@ class JSONParser(Parser):
         self.__validator = Validator()
 
     def parse(self, data_object):
-        if self.__validator.data_is_valid(data_object):
-            self.__item_value = data_object
+        data = json.loads(data_object)
+        if self.__validator.data_is_valid(data):
+            self.__item_value = data
+            self.setObjectPath()
             return True
 
     def get_item_value(self):
         return self.__item_value
+
+    def setObjectPath(self):
+        if 'object_path' not in self.__item_value.keys():
+            self.__item_value['object_path'] = ""

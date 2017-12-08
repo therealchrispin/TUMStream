@@ -1,5 +1,5 @@
 from pyramid.view import view_config, view_defaults
-from StreamProject.StreamProject.ItemCreator.ItemCreatorService import *
+from StreamProject.ItemCreator.ItemCreatorService import *
 
 
 @view_defaults(renderer="")

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Create Stream</h2>
+    <form id="form">
+        Title:<br>
+        <input type="text" id="title"><br>
+        Description:<br>
+        <input type="text" id="description"><br>
+        Category:<br>
+        <input type="text" id="category"><br>
+        Topic:<br>
+        <input type="text" id="topic"><br>
+        <input type="button" id="button" value="submit">
+    </form>
+
+    <div class="stream">
+
+    </div>
+</body>
+    <script src="{{request.static_url('stream:static/main.js')}}"></script>
+
+</html>

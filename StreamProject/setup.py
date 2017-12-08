@@ -14,6 +14,9 @@ requires = [
     'pyramid_jinja2',
     'pyramid_debugtoolbar',
     'waitress',
+    'sqlalchemy',
+    'zope.sqlalchemy',
+    'pyramid_tm'
 ]
 
 tests_require = [
@@ -47,6 +50,9 @@ setup(
     entry_points={
         'paste.app_factory': [
             'main = StreamProject:main',
+        ],
+        'console_scripts': [
+            'initialize_db = StreamProject.DbModel.initialize_db:main',
         ],
     },
 )
