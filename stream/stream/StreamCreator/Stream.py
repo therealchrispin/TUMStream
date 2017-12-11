@@ -1,4 +1,3 @@
-from stream.StreamCreator.StreamConverter import StreamConverter
 from stream.StreamCreator.StreamItem import StreamItem
 from stream.models.StreamItemModel import StreamItemModel
 
@@ -19,6 +18,7 @@ class Stream:
             stream_item.set_category(item.category)
             stream_item.set_topic(item.topic)
             stream_item.set_object_path(item.object_path)
+
             self.__streamItems.append(
                 stream_item.__dict__()
             )

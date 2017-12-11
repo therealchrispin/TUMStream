@@ -16,15 +16,15 @@ class View:
         return {'project': 'Stream'}
 
 
-class ItemCreatorBuilder(View):
+class ItemBuilder(View):
     def __init__(self, request):
         View.__init__(self, request)
         self.item_creator = ItemCreator(self.request)
 
 
-class JsonItemCreator(ItemCreatorBuilder):
+class JsonItem(ItemBuilder):
     def __init__(self, request):
-        ItemCreatorBuilder.__init__(self, request)
+        ItemBuilder.__init__(self, request)
 
     @view_config(route_name="itemcreator-json", renderer="json")
     def create_item_from_json(self):

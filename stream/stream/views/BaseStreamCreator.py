@@ -1,6 +1,6 @@
-from pyramid.view import view_config, view_defaults
+from pyramid.view import view_config
 from stream.StreamCreator.Stream import Stream
-from stream.views.ItemCreatorBuilder import View
+from stream.views.ItemBuilder import View
 
 
 class BaseStreamCreator(View):
@@ -17,4 +17,3 @@ class JSONStreamCreator(BaseStreamCreator):
     def get_stream(self):
 
         return {'itemList': self.stream.get_all()}
-

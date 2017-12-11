@@ -6,7 +6,7 @@ class StreamItem:
         self.__description = ""
         self.__category = category
         self.__topic = topic
-        self.__objnect_path = ""
+        self.__object_path = ""
 
     def set_id(self, id):
         self.__ID = id

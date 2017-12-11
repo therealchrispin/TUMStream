@@ -2,10 +2,9 @@ from stream.ItemCreator.DBWriteService import DBWriteService
 
 
 class ItemCreator:
-    def __init__(self, request):
-        self.__parser = None
-        self.__data_object = None
-        self.__Item = {}
+    def __init__(self, request, parser=None, data_object=None):
+        self.__parser = parser
+        self.__data_object = data_object
         self.__request = request
 
     def set_parser(self, parser):
